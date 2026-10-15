@@ -54,7 +54,7 @@ All four methods run on the same simulation clock.
 - **Simulation GIFs (blocks 1 and 2):**
   - **Rows:** Ours and ICE on top, DRY and WET below.
   - **Tiles per method, left to right:** the 3-D Simscape Multibody animation, a close-up bird's-eye view, and the NMPC panel. The NMPC panel shows the map, speed, lateral error, and the rear-tire capacity μF<sub>z</sub> used by the NMPC, compared with the true values.
-  - ** Colors:** blue is the vehicle, orange is the NMPC prediction, and teal shades show the road friction (pale = slippery, dark = grippy).
+  - **Colors:** blue is the vehicle, orange is the NMPC prediction, and teal shades show the road friction (pale = slippery, dark = grippy).
   - **Legend:** a strip along the bottom explains every line and color.
 - **Full video:** [media/demo_three_quarter.mp4](media/demo_three_quarter.mp4) (5760 × 2160, 30 fps, 150 s, 76 MB).
 
@@ -77,7 +77,7 @@ All four methods run on the same simulation clock.
 <p align="center">
   <img src="media/demo_lap_progress.gif" width="60%" alt="Lap progress of all four methods over 150 s, 8x speed">
 </p>
-<p align="center"><i>Lap progress of all four methods on one track map. ICE (μ = 0.3) stays in the lane but remains conservative after the grip increases. At t = 150 s, it has covered 71% of the lap, while Ours has covered 99.9%. In the paper's runs (Table 1), Ours completes the lap in 153.2 s, and ICE needs 202.7 s, 32 % longer.</i></p>
+<p align="center"><i>Lap progress of all four methods on one track map. ICE (μ = 0.3) stays in the lane but remains conservative after the grip increases. At t = 150 s, Ours completes the lap, while ICE has covered only 71% of it. In the paper's runs (Table 1), Ours completes the lap in 153.2 s, and ICE needs 202.7 s, 32% longer.</i></p>
 
 > The demo runs were re-simulated for visualization. They use the same track, controllers, and friction patches as the paper. The dry launch section also covers the 50 m before the starting point, so values in the video can differ slightly from Table 1.
 
