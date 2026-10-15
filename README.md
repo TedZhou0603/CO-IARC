@@ -58,28 +58,28 @@ All four methods run on the same simulation clock.
   - **Legend:** a strip along the bottom explains every line and colour.
 - **Full video:** [media/demo_three_quarter.mp4](media/demo_three_quarter.mp4) (5760 × 2160, 30 fps, 150 s, 76 MB).
 
-### 1. First 20 s in real time
+### 1. An overestimated friction prior leads to loss of stability (first 20 s, real time)
 
 <p align="center">
   <img src="media/demo_overview.gif" width="100%" alt="All four methods, first 20 s">
 </p>
-<p align="center"><i>DRY and WET leave the lane in the first μ = 0.3 patch; Ours and ICE stay in it. Click the image to view it full size.</i></p>
+<p align="center"><i>DRY (μ = 1.0) and WET (μ = 0.6) overestimate the tire capacity on the first μ = 0.3 patch. They lose stability and leave the lane, while Ours and ICE stay in it. Click the image to view it full size.</i></p>
 
-### 2. Ours over the full lap (6× speed)
+### 2. Ours: online friction adaptation over the full lap (6× speed)
 
 <p align="center">
   <img src="media/demo_ours_full_lap.gif" width="100%" alt="Ours over the full lap at 6x speed">
 </p>
-<p align="center"><i>The friction estimate (orange, bottom plot) follows the true capacity (black) through every friction patch.</i></p>
+<p align="center"><i>The estimated tire capacity (orange, bottom plot) follows the true capacity (black) through every friction patch. The planner replans the trajectory with the updated estimate.</i></p>
 
-### 3. Race progress over the full lap (8× speed)
+### 3. A conservative static prior is not time-optimal (full lap, 8× speed)
 
 <p align="center">
-  <img src="media/demo_race_full_lap.gif" width="60%" alt="All four methods on one map over the full lap, 8x speed">
+  <img src="media/demo_lap_progress.gif" width="60%" alt="Lap progress of all four methods over 150 s, 8x speed">
 </p>
-<p align="center"><i>All four methods on one map. At t = 150 s Ours is 1 m from the finish line, while ICE has covered only 71 % of the lap and is 702 m behind. In the paper's runs (Table 1), Ours finishes the lap in 153.2 s and ICE needs 202.7 s.</i></p>
+<p align="center"><i>Lap progress of all four methods on one track map. ICE (μ = 0.3) stays in the lane but remains conservative after the grip increases. At t = 150 s it has covered 71 % of the lap, while Ours has covered 99.9 %. In the paper's runs (Table 1), Ours completes the lap in 153.2 s and ICE needs 202.7 s, 32 % longer.</i></p>
 
-> The demo runs were re-simulated for visualization. They use the same track, controllers and friction patches as the paper. The dry launch section also extends 50 m behind the start line, so values in the video can differ slightly from Table 1.
+> The demo runs were re-simulated for visualization. They use the same track, controllers and friction patches as the paper. The dry launch section also covers the 50 m before the starting point, so values in the video can differ slightly from Table 1.
 
 ## Related repositories
 
