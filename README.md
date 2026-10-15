@@ -49,29 +49,35 @@ The four methods compared:
 
 ## Demo
 
-<p align="center">
-  <img src="media/demo_race_full_lap.gif" width="100%" alt="All four methods on one map over the full lap, 8x speed">
-</p>
-<p align="center"><i>Full lap at 8× speed, all four methods on one map. DRY and WET crash in the first μ = 0.3 patch. At t = 150 s Ours is 1 m from the finish line, while ICE has covered only 71 % of the lap and is 702 m behind. In the paper's runs (Table 1), Ours finishes the lap in 153.2 s and ICE needs 202.7 s.</i></p>
+All four methods run on the same simulation clock.
 
-The full simulation video shows all four methods at once on the same simulation clock.
+- **Simulation GIFs (blocks 1 and 2):**
+  - **Rows:** Ours and ICE on top, DRY and WET below.
+  - **Tiles per method, left to right:** the 3-D Simscape Multibody animation, a close-up bird's-eye view, and the NMPC panel. The NMPC panel shows the map, speed, lateral error, and the rear-tire capacity μF<sub>z</sub> used by the NMPC against the true value.
+  - **Colours:** blue is the vehicle, orange is the NMPC prediction, and teal shades show the road friction (pale = slippery, dark = grippy).
+  - **Legend:** a strip along the bottom explains every line and colour.
+- **Full video:** [media/demo_three_quarter.mp4](media/demo_three_quarter.mp4) (5760 × 2160, 30 fps, 150 s, 76 MB).
 
-- **Rows:** Ours and ICE on top, DRY and WET below.
-- **Tiles per method, left to right:** the 3-D Simscape Multibody animation, a close-up bird's-eye view, and the NMPC panel. The NMPC panel shows the map, speed, lateral error, and the rear-tire capacity μF<sub>z</sub> used by the NMPC against the true value.
-- **Colours:** blue is the vehicle, orange is the NMPC prediction, and teal shades show the road friction (pale = slippery, dark = grippy).
-- **Legend:** a strip along the bottom of the video explains every line and colour.
+### 1. First 20 s in real time
 
 <p align="center">
   <img src="media/demo_overview.gif" width="100%" alt="All four methods, first 20 s">
 </p>
-<p align="center"><i>First 20 s in real time: DRY and WET leave the lane in the first μ = 0.3 patch; Ours and ICE stay in it. Click the image to view it full size.</i></p>
+<p align="center"><i>DRY and WET leave the lane in the first μ = 0.3 patch; Ours and ICE stay in it. Click the image to view it full size.</i></p>
+
+### 2. Ours over the full lap (6× speed)
 
 <p align="center">
   <img src="media/demo_ours_full_lap.gif" width="100%" alt="Ours over the full lap at 6x speed">
 </p>
-<p align="center"><i>Ours over the full 150 s lap at 6× speed: the friction estimate (orange, bottom plot) follows the true capacity (black) through every patch.</i></p>
+<p align="center"><i>The friction estimate (orange, bottom plot) follows the true capacity (black) through every friction patch.</i></p>
 
-**Full video:** [media/demo_three_quarter.mp4](media/demo_three_quarter.mp4) (5760 × 2160, 30 fps, 150 s, 76 MB).
+### 3. Race progress over the full lap (8× speed)
+
+<p align="center">
+  <img src="media/demo_race_full_lap.gif" width="60%" alt="All four methods on one map over the full lap, 8x speed">
+</p>
+<p align="center"><i>All four methods on one map. At t = 150 s Ours is 1 m from the finish line, while ICE has covered only 71 % of the lap and is 702 m behind. In the paper's runs (Table 1), Ours finishes the lap in 153.2 s and ICE needs 202.7 s.</i></p>
 
 > The demo runs were re-simulated for visualization. They use the same track, controllers and friction patches as the paper. The dry launch section also extends 50 m behind the start line, so values in the video can differ slightly from Table 1.
 
