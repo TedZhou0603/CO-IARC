@@ -49,7 +49,12 @@ The four methods compared:
 
 ## Demo
 
-All four methods run at once on the same simulation clock.
+<p align="center">
+  <img src="media/demo_race_full_lap.gif" width="100%" alt="All four methods on one map over the full lap, 8x speed">
+</p>
+<p align="center"><i>Full lap at 8× speed, all four methods on one map. DRY and WET crash in the first μ = 0.3 patch. At t = 150 s Ours is 1 m from the finish line, while ICE has covered only 71 % of the lap and is 702 m behind. In the paper's runs (Table 1), Ours finishes the lap in 153.2 s and ICE needs 202.7 s.</i></p>
+
+The full simulation video shows all four methods at once on the same simulation clock.
 
 - **Rows:** Ours and ICE on top, DRY and WET below.
 - **Tiles per method, left to right:** the 3-D Simscape Multibody animation, a close-up bird's-eye view, and the NMPC panel. The NMPC panel shows the map, speed, lateral error, and the rear-tire capacity μF<sub>z</sub> used by the NMPC against the true value.
