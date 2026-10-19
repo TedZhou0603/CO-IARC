@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="#citation"><img src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b.svg" alt="arXiv: coming soon"></a>
+  <a href="https://arxiv.org/abs/2610.22675"><img src="https://img.shields.io/badge/arXiv-2610.22675-b31b1b.svg" alt="arXiv: 2610.22675"></a>
   <a href="#demo"><img src="https://img.shields.io/badge/Demo-video-2a78d6.svg" alt="Demo video"></a>
 </p>
 
@@ -88,13 +88,13 @@ All four methods run on the same simulation clock.
 
 ## Citation
 
-The paper will be on arXiv soon; the link and BibTeX will be updated then.
+The paper is on arXiv: [arXiv:2610.22675](https://arxiv.org/abs/2610.22675). If you use this work, please cite:
 
 ```bibtex
 @article{zhou2026coiarc,
   title   = {Online Constraint Optimization-Based Indirect-Adaptive Robust Control for Autonomous Vehicles with Unknown Friction},
   author  = {Zhou, Yupeng and Chang, I-Chia and Wang, Ziran and Yao, Bin},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2610.22675},
   year    = {2026}
 }
 ```
